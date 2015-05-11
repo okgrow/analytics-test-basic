@@ -1,0 +1,34 @@
+head
+  title Meteor Base
+  meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+  meta(http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE")
+  meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+
+  meta(name="mobile-web-app-capable" content="yes")
+  meta(name="apple-mobile-web-app-capable" content="yes")
+
+template(name="layout")
+  .wrapper(id="{{routeName}}-wrapper")
+    .content
+      nav.navbar.navbar-default(role='navigation')
+        .container
+          .navbar-header
+            a.navbar-brand(href='{{pathFor route="home"}}') Brand
+          .collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li
+                a(href='{{pathFor route="private"}}')
+                  | Private
+              li
+                a(href='{{pathFor route="codeWordClearance"}}') Code
+              li
+                a(href='{{pathFor route="topSecret"}}') Top
+              +if currentUser
+                +with currentUser
+                  li
+                    a(href='{{pathFor route="userProfile"}}') Profile
+
+          ul.nav.navbar-nav.navbar-right
+            li.active
+              +atNavButton
+      +yield

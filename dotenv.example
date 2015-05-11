@@ -1,0 +1,13 @@
+# Copy this file to .env and configure as desired
+
+# Velocity options
+#DEBUG=1
+#JASMINE_DEBUG=1
+#VELOCITY_DEBUG=1
+#VELOCITY_DEBUG_MIRROR=1
+#JASMINE_BROWSER=PhantomJS
+
+# Some suggestions, check `heroku config -s staging` for more
+PLANTER_BUCKET_NAME=#take this from PLANTER_BUCKET_NAME_DEV on staging
+PLANTER_S3_ACCESS_KEY_ID=#take this from staging
+PLANTER_S3_SECRET_ACCESS_KEY=#take this from staging

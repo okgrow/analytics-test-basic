@@ -1,0 +1,25 @@
+template(name="home")
+  .container
+    h2 Hello World!
+
+    +if currentUser
+      +with currentUser
+        a(href="{{pathFor route='userProfile'}}")
+          | Your profile page
+    +else
+      +atForm
+      | Not signed in
+
+
+template(name="private")
+  .container
+    h2 this is a private area
+
+
+template(name="codeWordClearance")
+  .container
+    h2 this area is code-word-clearance only!
+
+template(name="topSecret")
+  .container
+    h2 You've reached the Top Secret section!!
